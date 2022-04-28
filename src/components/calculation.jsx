@@ -1,6 +1,7 @@
 import React from "react";
 import imgDol from "../images/icon-dollar.svg"
 import imgPer from "../images/icon-person.svg"
+import "./calculation.css"
 
 export const Calculation = (props)=>{
     let {data, change, click} = props;
