@@ -4,6 +4,7 @@
     font-size: 10px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 input{
@@ -15,14 +16,33 @@ input{
     padding-right: 5%;    
     width: 95%;
     border-radius: 5%;
-    border: 0;
+    border: 3px solid hsl(189, 41%, 97%);
     height: 30px;
     background-color: hsl(189, 41%, 97%);
+}
+
+
+#bill:hover{
+    cursor: pointer;
+}
+
+#bill:focus{
+    border: 3px solid hsl(172, 67%, 45%);
 }
 
 form{
     margin: 5px;    
 }
+
+span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span span{
+    color:red;
+}
+
 
 form div{
     position: relative;
@@ -42,13 +62,29 @@ form img{
 
 .button button{
     font-family: 'Space Mono',monospace;
-    color: white;
     border: 0px;
     margin: 5px;
     height: 30px;
     border-radius: 5px;
-    background-color: hsl(183, 100%, 15%);
+    
 }
+
+.aa{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+}
+
+.bb{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.button button:hover{
+    background-color:hsl(185, 41%, 84%);
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+}
+
 .calculation >p{
     margin: 5px;
     margin-top: 25px;
@@ -58,7 +94,7 @@ form img{
     margin-top: 25px;
 }
 
-@media(max-width : 375px){         
+@media screen and(max-width : 500px){         
     .button{
         grid-template-columns: 1fr 1fr;   
     }

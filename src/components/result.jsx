@@ -2,12 +2,19 @@ import React from "react";
 import "./result.css"
 
 export const Result=(props)=>{
-    let {amount, total} = props;
+    let {amount, total, reset, people} = props;
+    let classButton = "";
+    if(people === 0){
+        classButton = "first"
+    }
+    else{
+        classButton = "second"
+    }
     return(
             <div className="result">
                 <div className="dollar">
                     <div className="amount">
-                        <p>Tip Amount</p>
+                        <p>Tip-Amount</p>
                         <p>/ person</p>
                     </div>
                     <div className="num">${amount.toFixed(2)}</div>    
@@ -19,7 +26,7 @@ export const Result=(props)=>{
                     </div>
                     <div className="num">${total.toFixed(2)}</div>    
                 </div>
-                <button>Reset</button>
+                <button className = {classButton} onClick={reset}>Reset</button>
             </div>
     )
 }
